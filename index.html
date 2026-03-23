@@ -32,8 +32,9 @@ body {
 header {
     background: linear-gradient(135deg, #0b3d91, #1c6ed5);
     color: white;
-    padding: 60px 20px;
+    padding: 80px 20px 40px;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
@@ -118,15 +119,32 @@ html {
 </head>
 
 <body>
-<nav style="position:sticky; top:0; background:white; padding:10px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1); z-index:1000;">
-    <a href="#about" style="margin:10px;">About</a>
-    <a href="#experience" style="margin:10px;">Experience</a>
-    <a href="#projects" style="margin:10px;">Projects</a>
-    <a href="#skills" style="margin:10px;">Skills</a>
-    <a href="#contact" style="margin:10px;">Contact</a>
+<nav style="
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+">
+    <a href="#about" style="margin:15px; font-weight:500;">About</a>
+    <a href="#experience" style="margin:15px; font-weight:500;">Experience</a>
+    <a href="#projects" style="margin:15px; font-weight:500;">Projects</a>
+    <a href="#skills" style="margin:15px; font-weight:500;">Skills</a>
+    <a href="#contact" style="margin:15px; font-weight:500;">Contact</a>
 </nav>
 <header>
-    <img src="your-photo.jpg" width="120" style="border-radius:50%;">
+    <img src="your-photo.jpg" 
+     style="
+     width:120px;
+     height:120px;
+     border-radius:50%;
+     border:4px solid white;
+     margin-top:-60px;
+     background:white;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+     ">
     <h1>Soumajit Roy</h1>
     <p>Railway Signalling & Kavach (TCAS) Commissioning Engineer</p>
     <a href="#contact"><button>Contact Me</button></a>
