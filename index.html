@@ -75,10 +75,19 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.2s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
 }
 
 .card:hover {
     transform: translateY(-5px);
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .timeline {
     border-left: 3px solid #0b3d91;
@@ -109,12 +118,23 @@ html {
 </head>
 
 <body>
+<nav style="position:sticky; top:0; background:white; padding:10px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1); z-index:1000;">
+    <a href="#about" style="margin:10px;">About</a>
+    <a href="#experience" style="margin:10px;">Experience</a>
+    <a href="#projects" style="margin:10px;">Projects</a>
+    <a href="#skills" style="margin:10px;">Skills</a>
+    <a href="#contact" style="margin:10px;">Contact</a>
+</nav>
 <header>
     <img src="your-photo.jpg" width="120" style="border-radius:50%;">
     <h1>Soumajit Roy</h1>
     <p>Railway Signalling & Kavach (TCAS) Commissioning Engineer</p>
+    <a href="#contact"><button>Contact Me</button></a>
     <a href="https://www.linkedin.com/in/soumajitroy/" target="_blank">
     <button>Connect on LinkedIn</button>
+    </a>
+    <a href="Soumajit_Roy_Resume.pdf" download>
+    <button>Download Resume</button>
     </a>
     <button onclick="toggleMode()" style="position:absolute; top:20px; right:20px;">
 🌙
@@ -130,7 +150,7 @@ html {
     </div>
 </section>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
         <p>
@@ -143,7 +163,7 @@ html {
     </div>
 </section>
 
-<section>
+<section id="experience">
     <h2>👨‍💼 Experience</h2>
 
     <div class="timeline">
@@ -171,7 +191,7 @@ html {
 
     </div>
 </section>
-<section>
+<section id="projects">
     <h2>📂 Projects</h2>
 
     <div class="card">
@@ -184,7 +204,8 @@ html {
         <p>Handled installation supervision, validation, troubleshooting, and reprogramming of RFID tags in railway track environments.</p>
     </div>
 
-</section><section>
+</section>
+<section id="skills">
     <h2>🛠 Skills</h2>
     <div class="card">
         <ul>
@@ -208,7 +229,7 @@ html {
     </div>
 </section>
 
-<section>
+<section id="contact">
     <h2>📞 Contact</h2>
     <div class="card">
         <p>Email: itssoumajit@gmail.com</p>
@@ -222,8 +243,15 @@ html {
 </section>
 
 <footer>
-    <p>© 2026 Soumajit Roy</p>
+    <p><strong>Soumajit Roy</strong></p>
+    <p>Railway Signalling & Kavach (TCAS) Engineer</p>
+    <p>© 2026 All Rights Reserved</p>
 </footer>
+<section>
+    <p style="font-size:12px; color:gray;">
+        Keywords: Soumajit Roy, Kavach Engineer, Railway Signalling Engineer, TCAS, RFID, Indian Railways, FAT SAT Commissioning
+    </p>
+</section>
 <script>
 function toggleMode() {
     document.body.classList.toggle("dark");
