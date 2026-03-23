@@ -10,6 +10,18 @@
 <title>Soumajit Roy | Railway Signalling & Kavach (TCAS) Engineer</title>
 
 <style>
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+body.dark .card {
+    background: #1e1e1e;
+}
+
+body.dark header {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
@@ -68,6 +80,31 @@ h2 {
 .card:hover {
     transform: translateY(-5px);
 }
+.timeline {
+    border-left: 3px solid #0b3d91;
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: #0b3d91;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(11,61,145,0.2);
+}
+html {
+    scroll-behavior: smooth;
+}
 </style>
 </head>
 
@@ -79,7 +116,19 @@ h2 {
     <a href="https://www.linkedin.com/in/soumajitroy/" target="_blank">
     <button>Connect on LinkedIn</button>
     </a>
+    <button onclick="toggleMode()" style="position:absolute; top:20px; right:20px;">
+🌙
+</button>
 </header>
+
+<section>
+    <div class="card" style="text-align:center;">
+        <h2>Highlights</h2>
+        <p>✔ 2+ Years Experience</p>
+        <p>✔ Kavach (TCAS) Commissioning</p>
+        <p>✔ FAT / SAT / RFID Specialist</p>
+    </div>
+</section>
 
 <section>
     <h2>About Me</h2>
@@ -95,42 +144,48 @@ h2 {
 </section>
 
 <section>
-    <h2>Experience</h2>
-    <div class="card">
-        <h3>Commissioning Engineer – Kavach (TCAS)</h3>
-        <p><strong>HBL Engineering Ltd</strong></p>
-        <ul>
-            <li>Execution of FAT, I-SAT, and SAT for Kavach systems</li>
-            <li>Pre-commissioning checks and system validation</li>
-            <li>RFID tag installation supervision and inter-tag verification</li>
-            <li>Troubleshooting during commissioning</li>
-            <li>Technical documentation and reporting</li>
-            <li>Training railway staff using simulation systems</li>
-        </ul>
-    </div>
-    <div class="card">
-        <h3>Trainee Engineer Signalling</h3>
-        <p><strong>Railtranz Consultancy Pvt. Ltd.</strong></p>
-        <ul>
-            <li>1+ year experience in Indian Railways remodelling projects (West Central Railway – Jabalpur & Mumbai divisions)</li>
-            <li>Prepared signalling designs including Control Tables, CTR, CCP, CRP, CCC, TBP, SIP, Locking Charts, and Power Supply Diagrams</li>
-            <li>Proficient in AutoCAD 2D & Electrical for signalling design and documentation</li>
-        </ul>
-    </div>
-</section>
+    <h2>👨‍💼 Experience</h2>
 
-<section>
-    <h2>Projects</h2>
-    <div class="card">
-        <ul>
-            <li>Kavach (TCAS) System Commissioning</li>
-            <li>RFID Tag Installation & Validation</li>
-            <li>Railway Signalling Testing & Integration</li>
-        </ul>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>Commissioning Engineer – Kavach (TCAS)</h3>
+            <p><strong>HBL Engineering Ltd</strong></p>
+            <ul>
+                <li>FAT, I-SAT & SAT execution</li>
+                <li>RFID installation & inter-tag validation</li>
+                <li>Troubleshooting during commissioning</li>
+                <li>Training railway staff</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Railway Signalling Engineer</h3>
+            <ul>
+                <li>Worked on WCR projects (Jabalpur & Mumbai)</li>
+                <li>Prepared Control Tables, CTR, SIP, Locking Charts</li>
+                <li>Designed TAG TIN layouts & TSR profiles</li>
+                <li>AutoCAD 2D & Electrical design work</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 <section>
-    <h2>Skills</h2>
+    <h2>📂 Projects</h2>
+
+    <div class="card">
+        <h3>Kavach (TCAS) Commissioning</h3>
+        <p>Executed FAT, I-SAT, SAT and field commissioning of Kavach systems including RFID validation and system integration.</p>
+    </div>
+
+    <div class="card">
+        <h3>RFID Tag Implementation</h3>
+        <p>Handled installation supervision, validation, troubleshooting, and reprogramming of RFID tags in railway track environments.</p>
+    </div>
+
+</section><section>
+    <h2>🛠 Skills</h2>
     <div class="card">
         <ul>
             <li>Railway Signalling</li>
@@ -144,7 +199,7 @@ h2 {
     </div>
 </section>
 <section>
-    <h2>Articles</h2>
+    <h2>✍️ Articles</h2>
     <div class="card">
         <ul>
             <li><a href="https://medium.com/@soumajit-roy/introduction-to-kavach-tcas-indias-indigenous-train-collision-avoidance-system-b91af5b25d9b">Introduction to Kavach (TCAS): India’s Indigenous Train Collision Avoidance System</a></li>
@@ -154,7 +209,7 @@ h2 {
 </section>
 
 <section>
-    <h2>Contact</h2>
+    <h2>📞 Contact</h2>
     <div class="card">
         <p>Email: itssoumajit@gmail.com</p>
         <p>
@@ -169,6 +224,10 @@ h2 {
 <footer>
     <p>© 2026 Soumajit Roy</p>
 </footer>
-
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
 </body>
 </html>
